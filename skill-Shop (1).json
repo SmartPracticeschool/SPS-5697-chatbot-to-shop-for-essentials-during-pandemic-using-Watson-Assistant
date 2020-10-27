@@ -1,0 +1,1226 @@
+{
+  "intents": [
+    {
+      "intent": "Enquiry",
+      "examples": [
+        {
+          "text": "Can you provide with the Flyer"
+        },
+        {
+          "text": "Can you show some offer on items"
+        },
+        {
+          "text": "I want to look into the list"
+        },
+        {
+          "text": "What are the offers available?"
+        },
+        {
+          "text": "What categories do you provide?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greeting",
+      "examples": [
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Namaskar"
+        },
+        {
+          "text": "Namaste"
+        },
+        {
+          "text": "Thanks"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Order",
+      "examples": [
+        {
+          "text": "I want to place an order"
+        },
+        {
+          "text": "I would like to order from your shop"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "Email",
+          "patterns": [
+            "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Category",
+          "synonyms": [
+            "Categories",
+            "looking",
+            "search",
+            "want"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Flyer",
+          "synonyms": [
+            "Advertisement paper",
+            "catalog"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Groceries",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "itemlist",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "item list",
+          "synonyms": [
+            "items",
+            "list",
+            "lst"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Medical supply",
+          "synonyms": [
+            "med supply"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Milk",
+          "synonyms": [
+            "mlk"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offer items",
+          "synonyms": [
+            "new",
+            "offer",
+            "price"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "deals",
+            "discounts"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vegetables",
+          "synonyms": [
+            "Green leaves",
+            "leafy veg",
+            "leafy vegetables",
+            "Veg"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bye",
+          "synonyms": [
+            "Good bye"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "GA",
+            "Gud Afternoon",
+            "gud noon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "GE",
+            "gud eve",
+            "Gud Evening"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "GM",
+            "gud mrng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Namaskaar",
+          "synonyms": [
+            "Namaste",
+            "Om"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Namaste",
+          "synonyms": [
+            "Namaskaar",
+            "Om"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Thanks",
+          "synonyms": [
+            "Thank you"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Groceries",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Groceries",
+          "synonyms": [
+            "Dal",
+            "Oil",
+            "Rice"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "MedicalSupplies",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Face Shield",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "First-Aid kit",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gloves",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Immunity builder",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Masks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paracetomol",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sanitiser",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Milk",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Milk",
+          "synonyms": [
+            "Amul",
+            "Curd",
+            "Heritage",
+            "Nandini"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Name",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "name",
+          "patterns": [
+            "\"^[a-zA-Z0-9+_.-]+$\""
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "OfferItems",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Combo Tomatoes+Onion+Potatoes",
+          "synonyms": [
+            "Onion",
+            "Potatoes",
+            "Tomatoes"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "N95 Masks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sanitiser",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy",
+            "orders",
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": [
+            "Cash On Delivery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Credit Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Debit card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Vegetables",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bhendi",
+          "synonyms": [
+            "Okra"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Gajor",
+          "synonyms": [
+            "carrot"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vegetables",
+          "synonyms": [
+            "green leaves",
+            "veg"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              },
+              {
+                "text": "Thank you. Try again later"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1602440092893",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "We accept COD, Credit & Debit card. What is your mode of Payment? "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1602510502169",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1602510502172",
+      "previous_sibling": "handler_8_1602510502172"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_4_1602440092893",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602440264419",
+      "previous_sibling": "node_5_1602511542396"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Time slot",
+            "options": [
+              {
+                "label": "9.30 am to 10.30 am",
+                "value": {
+                  "input": {
+                    "text": "9.30 am to 10.30 am"
+                  }
+                }
+              },
+              {
+                "label": "10.30 am to 11.30 am",
+                "value": {
+                  "input": {
+                    "text": "10.30 am to 11.30 am"
+                  }
+                }
+              },
+              {
+                "label": "4.00 pm to 5.00 pm",
+                "value": {
+                  "input": {
+                    "text": "4.00 pm to 5.00 pm"
+                  }
+                }
+              }
+            ],
+            "description": "Available Time slots",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_1_1602510652661",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1602510652663",
+      "previous_sibling": "handler_3_1602510652663"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Select the items you want"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1602440265133",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602440265146",
+      "previous_sibling": "handler_6_1602440265146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1602510451603",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1602510451605"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1602510652661",
+      "context": {
+        "time": "@sys-time"
+      },
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_3_1602510652663"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1602440265133",
+      "context": {
+        "MedicalSupplies": "@MedicalSupplies"
+      },
+      "conditions": "@MedicalSupplies",
+      "event_name": "input",
+      "dialog_node": "handler_6_1602440265146"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide delivery date"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1602511107145",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1602511107150",
+      "previous_sibling": "handler_8_1602511107150"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602510502169",
+      "context": {
+        "Payment": "@Payment"
+      },
+      "conditions": "@Payment",
+      "event_name": "input",
+      "dialog_node": "handler_8_1602510502172"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1602511107145",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_8_1602511107150"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many do you want?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1602510451603",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1602510451605",
+      "previous_sibling": "handler_3_1602510451605"
+    },
+    {
+      "type": "standard",
+      "title": "Enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Enquiry || @Enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_1_1602437649462",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "node_3_1602436369333"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greeting || @Greetings",
+      "dialog_node": "node_3_1602436369333",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "OfferItems",
+      "parent": "node_1_1602437649462",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@OfferItems",
+      "dialog_node": "node_3_1602439579354"
+    },
+    {
+      "type": "standard",
+      "title": "Email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you.  Your mail-id $Email will be used for further reference. How may I help you?"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "Email": "@Email.literal"
+      },
+      "conditions": "@Email",
+      "dialog_node": "node_3_1602785605993"
+    },
+    {
+      "type": "frame",
+      "title": "Order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you, your order of $number  $MedicalSupplies  is placed successfully. Expected delivery is at $time on  $date . Please pay using $Payment. Your receipt will be sent to $Email"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#Order && @Order",
+      "digress_in": "returns",
+      "dialog_node": "node_4_1602440092893",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1602437649462",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "Deleting Context",
+      "output": {
+        "deleted": "<?context.remove('MedicalSupplies')?><?context.remove('number')?><?context.remove('date')?><?context.remove('time')?><?context.remove('Payment')?><?context.remove('Email')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602440092893",
+      "conditions": "true",
+      "dialog_node": "node_5_1602511542396"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 120/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602439579354",
+      "conditions": "@OfferItems:(Combo Tomatoes+Onion+Potatoes)",
+      "dialog_node": "response_1_1602439719767",
+      "previous_sibling": "response_8_1602439673968"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "source": "https://images.newindianexpress.com/uploads/user/ckeditor_images/article/2020/4/11/Groceries.JPG",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:Groceries",
+      "dialog_node": "response_1_1602958156849",
+      "previous_sibling": "response_9_1602955080428"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you . Visit again!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602436369333",
+      "conditions": "@Greetings:Thanks",
+      "dialog_node": "response_1_1603720646302",
+      "previous_sibling": "response_7_1602436780590"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Itemlist",
+            "source": "WhatsApp Image 2020-10-17 at 9.42.45 PM.jpeg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:itemlist",
+      "dialog_node": "response_2_1602438489966",
+      "previous_sibling": "response_5_1602438264905"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Vegetables",
+            "source": " https://agfstorage.blob.core.windows.net/misc/FP_com/2020/07/13/Lgoos9000000.jpg ",
+            "description": "What do you want to order?",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:Vegetables",
+      "dialog_node": "response_2_1603003413510",
+      "previous_sibling": "response_1_1602958156849"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon! What are you looking for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602436369333",
+      "conditions": "@Greetings:(Good Afternoon)",
+      "dialog_node": "response_3_1602436764220",
+      "previous_sibling": "response_5_1602436696819"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi Namaste! What are you looking for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602436369333",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1602436822139",
+      "previous_sibling": "response_6_1603720688791"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Offer Items",
+            "options": [
+              {
+                "label": "Combo Tomatoes+Onion+Potatoes",
+                "value": {
+                  "input": {
+                    "text": "Combo Tomatoes+Onion+Potatoes"
+                  }
+                }
+              },
+              {
+                "label": "Sanitiser",
+                "value": {
+                  "input": {
+                    "text": "Sanitiser"
+                  }
+                }
+              },
+              {
+                "label": "N95 Masks",
+                "value": {
+                  "input": {
+                    "text": "N95 Masks"
+                  }
+                }
+              }
+            ],
+            "description": "Please give your option",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:(offer items)",
+      "dialog_node": "response_3_1602438926362",
+      "previous_sibling": "response_2_1602438489966"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 380 "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602439579354",
+      "conditions": "@OfferItems:Sanitiser",
+      "dialog_node": "response_3_1602439747209",
+      "previous_sibling": "response_1_1602439719767"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning! What are you looking for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602436369333",
+      "conditions": "@Greetings:(Good Morning)",
+      "dialog_node": "response_5_1602436696819"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We give 20% off on vegetables."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "10% discount on credit visa card payment."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:offers",
+      "dialog_node": "response_5_1602438264905",
+      "previous_sibling": "response_9_1602437767228"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Milk Products",
+            "source": "https://www.tvdaijiworld.com/images1/milk_090213-3.jpg  ",
+            "description": "What do you want to order?",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:Milk",
+      "dialog_node": "response_6_1603003529128",
+      "previous_sibling": "response_2_1603003413510"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Medical Supply",
+            "source": "https://www.sagisag.com/admin/img/7.jpg",
+            "description": "What do you want to oder?",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:(Medical supply)",
+      "dialog_node": "response_6_1603003599366",
+      "previous_sibling": "response_6_1603003529128"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bye . Thank you"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602436369333",
+      "conditions": "@Greetings:Bye",
+      "dialog_node": "response_6_1603720688791",
+      "previous_sibling": "response_1_1603720646302"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening! What are you looking for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602436369333",
+      "conditions": "@Greetings:(Good Evening)",
+      "dialog_node": "response_7_1602436780590",
+      "previous_sibling": "response_3_1602436764220"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 500/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1602439579354",
+      "conditions": "@OfferItems:(N95 Masks)",
+      "dialog_node": "response_8_1602439673968"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Flyer",
+            "source": "https://i.pinimg.com/564x/3a/d2/75/3ad275120355d5a9bf9e9866459405a9.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:Flyer",
+      "dialog_node": "response_9_1602437767228",
+      "previous_sibling": "node_3_1602439579354"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Category",
+            "options": [
+              {
+                "label": "Vegetables",
+                "value": {
+                  "input": {
+                    "text": "Vegetables"
+                  }
+                }
+              },
+              {
+                "label": "Medical Supply",
+                "value": {
+                  "input": {
+                    "text": "Medical Supply"
+                  }
+                }
+              },
+              {
+                "label": "Milk",
+                "value": {
+                  "input": {
+                    "text": "Milk"
+                  }
+                }
+              },
+              {
+                "label": "Groceries",
+                "value": {
+                  "input": {
+                    "text": "Groceries"
+                  }
+                }
+              }
+            ],
+            "description": "Please give your option",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1602437649462",
+      "conditions": "@Enquiry:Category",
+      "dialog_node": "response_9_1602955080428",
+      "previous_sibling": "response_3_1602438926362"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1602440092893",
+      "variable": "$date",
+      "dialog_node": "slot_10_1602511107145",
+      "previous_sibling": "slot_4_1602510502169"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1602440092893",
+      "variable": "$time",
+      "dialog_node": "slot_1_1602510652661",
+      "previous_sibling": "slot_10_1602511107145"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1602440092893",
+      "variable": "$number",
+      "dialog_node": "slot_2_1602510451603",
+      "previous_sibling": "slot_9_1602440265133"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1602440092893",
+      "variable": "$Payment",
+      "dialog_node": "slot_4_1602510502169",
+      "previous_sibling": "slot_2_1602510451603"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1602440092893",
+      "variable": "$MedicalSupplies",
+      "dialog_node": "slot_9_1602440265133",
+      "previous_sibling": "handler_1_1602440264419"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I am a Bot for MyShop. I can help you in online shopping for essential items during pandemic. Iam capable of Displaying items(Vegetables, Milk, Groceries, Medical Supplies), Show offers, Offer items and Place orders. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [
+              {
+                "text": "Please provide me with your Email-id."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "abc@gmail.com"
+    }
+  ],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Shop",
+  "language": "en",
+  "description": ""
+}
